@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'pin_map.dart';
 
 class MainMapPage extends StatelessWidget {
-  const MainMapPage({super.key});
+  const MainMapPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,67 +14,107 @@ class MainMapPage extends StatelessWidget {
         body: Center(
           child: Stack(
             children: [
-              ClipPath(
-                clipper: YuseongClipper(),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://www.wikihow.com/images_en/thumb/2/2f/769114-9.jpg/v4-460px-769114-9.jpg'),
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PinMapPage()),
+                  );
+                },
+                child: ClipPath(
+                  clipper: YuseongClipper(),
+                  child: Container(
+                    width: 300,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://www.wikihow.com/images_en/thumb/2/2f/769114-9.jpg/v4-460px-769114-9.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
-              ClipPath(
-                clipper: DaedeokClipper(),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://velog.velcdn.com/images/io_/post/fe69f46a-5331-4e65-84f0-84d69a9d25ec/image.png'),
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PinMapPage()),
+                  );
+                },
+                child: ClipPath(
+                  clipper: DaedeokClipper(),
+                  child: Container(
+                    width: 300,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://velog.velcdn.com/images/io_/post/fe69f46a-5331-4e65-84f0-84d69a9d25ec/image.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
-              ClipPath(
-                clipper: SeoClipper(),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://blog-cdn.tosspayments.com/wp-content/uploads/2022/04/07171631/copyright-5-thumb.jpg'),
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PinMapPage()),
+                  );
+                },
+                child: ClipPath(
+                  clipper: SeoClipper(),
+                  child: Container(
+                    width: 300,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://blog-cdn.tosspayments.com/wp-content/uploads/2022/04/07171631/copyright-5-thumb.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
-              ClipPath(
-                clipper: JungClipper(),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://www.wikihow.com/images_en/thumb/c/cc/769114-7.jpg/v4-460px-769114-7.jpg'),
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PinMapPage()),
+                  );
+                },
+                child: ClipPath(
+                  clipper: JungClipper(),
+                  child: Container(
+                    width: 300,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://www.wikihow.com/images_en/thumb/c/cc/769114-7.jpg/v4-460px-769114-7.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
-              ClipPath(
-                clipper: DongClipper(),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://blog-cdn.tosspayments.com/wp-content/uploads/2022/04/07171631/copyright-5-thumb.jpg'),
-                      fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PinMapPage()),
+                  );
+                },
+                child: ClipPath(
+                  clipper: DongClipper(),
+                  child: Container(
+                    width: 300,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://blog-cdn.tosspayments.com/wp-content/uploads/2022/04/07171631/copyright-5-thumb.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -106,7 +147,6 @@ class YuseongClipper extends CustomClipper<Path> {
     return false;
   }
 }
-
 
 class DaedeokClipper extends CustomClipper<Path> {
   @override
